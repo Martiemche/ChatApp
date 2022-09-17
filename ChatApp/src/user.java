@@ -27,6 +27,7 @@ public class user {
         boolean isSignedin;
         boolean isVerified;
         boolean isUnique;
+        boolean isEmpty;
 
         String LatestUser;
         byte LatestPinHash;
@@ -89,4 +90,13 @@ public class user {
     public String getVerifiedUser(String verifiedUser) {
         return verifiedUser;
     }
+    public void isEmpty(boolean isEmpty) {
+    	if(value)
+    }
+   
+    
+    
+    
+    
+    
     }

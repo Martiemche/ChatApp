@@ -8,10 +8,10 @@ import java.util.Random;
 import java.time.ZonedDateTime;
 public class signin {
     ArrayList<String> Timestamps = new ArrayList<>();
-
-
+    ArrayList<String> ZonedDateTime = new ArrayList<>();
+ 
     Timestamp timestamp = new Timestamp(Instant.now());
-    ZonedDateTime zdt = new ZonedDateTime.now();
+    ZonedDateTime zdt = new ZonedDateTime();
     Random random = new Random();
     String space = " "; //since java is shit and can't let me see if a byte contains
     Scanner scanner = new Scanner(System.in);
@@ -21,10 +21,10 @@ public class signin {
     ArrayList<String> groupChats = new ArrayList<>();
 
 
-    public void signInPromt(byte space, String UserName) {
+    public void signInPromt(String space, String UserName) {
         System.out.println("Please create your username");
         UserName = scanner.nextLine();
-        if(UserName.contains()(space)) {
+        if(UserName.contains(space)) {
             System.out.println();
             signInPromt(null);
         } else if(UserName.length()>16) { 
