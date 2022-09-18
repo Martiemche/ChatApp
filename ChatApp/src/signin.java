@@ -10,7 +10,7 @@ public class signin {
     ArrayList<String> Timestamps = new ArrayList<>();
     ArrayList<String> ZonedDateTime = new ArrayList<>();
  
-    Timestamp timestamp = new Timestamp(Instant.now());
+    Timestamp timestamp = new Timestamp(Instant);
     ZonedDateTime zdt = new ZonedDateTime();
     Random random = new Random();
     String space = " "; //since java is shit and can't let me see if a byte contains
@@ -19,31 +19,38 @@ public class signin {
 
     ArrayList<String> messages = new ArrayList<>();
     ArrayList<String> groupChats = new ArrayList<>();
+    
+    byte latestVerifiedPinHash;
+    byte latestVerifiedUser;
 
 
-    public void signInPromt(String space, String UserName) {
+    public void signInPromt(String space, String Username) {
         System.out.println("Please create your username");
-        UserName = scanner.nextLine();
-        if(UserName.contains(space)) {
-            System.out.println();
+        Username = scanner.nextLine();
+        if(Username.contains(space)) {
+            System.out.println("Your username can not have a space");
             signInPromt(null);
-        } else if(UserName.length()>16) { 
-            System.out.println("Name is too long, make sure its less than 16 letter");
+        } else if(Username.length()>16) { 
+            System.out.println("Name is too long, make sure its less than 16 letters");
+            if(Username.length()>6) {
+            	System.out.println("Name is too short, make sure it is more than 6 letters");
+            }
             signInPromt(null);
+            
         }
     }
     public void logInPromt(String Username, List verifiedUserList) {
-         ArrayList<String> verifiedUsers = String.getList();
+         ArrayList<String> verifiedUserList = String.getList();
         System.out.println("what is your username?");
-        UserName = scanner.nextLine();
-        if(verifiedUserListUserName.contains(this.Username)) {
+        Username = scanner.nextLine();
+        if(verifiedUserList.contains(Username)) {
             System.out.println("This username is already taken!");
         }
     }
 
-    public void verifyPinHash(byte PinHash, byte LatestPinHash, List verifiedPinHashes)  {
-        if (LatestPinHash.isVerified == true) {
-            verifiedPinHashes.add(LatestPinHash);
+    public void verifyPinHash(byte PinHash, byte LatestPinHash, List verifiedPinHashList )  {
+        if (verifiedPinHashList.contains(LatestPinHash)) {
+            verifiedPinHashList.add(LatestPinHash);
         } else {
             System.out.println("error: wrong password, try again");
             logInPromt(null);
@@ -53,13 +60,13 @@ public class signin {
 
     }
     public void verifyUser(byte LatestUser, boolean isSignedIn) {
-        List <String> verifiedUsers = new ArrayList<>();
+        List <String> verifiedUserList = new ArrayList<>();
     if(isSignedIn == true) {
-        verifiedUsers.add(LatestUser);
+        verifiedUserList.add(LatestUser);
     } else {
         System.out.println("sign in before verifying");
     }
-    ArrayList <byte[]> verifiedPinHashes = new ArrayList<byte[]>();
+    ArrayList <byte[]> verifiedPinHashList = new ArrayList<byte[]>();
 }
 public void verifyIP() {
     //can't pull ip 😦
@@ -67,22 +74,24 @@ public void verifyIP() {
 public void verifyHWID() {
     //not sure if I can do this with only jre
 }
-public void comparePinHash(List verifiedUsers, byte LatestUser, byte LatestPinHash, List PinHashList) {
-    if(LatestPinHash :: PinHashList) {
-        verifiedUsers.add(LatestUser);
+public void comparePinHash(List verifiedUserList, byte LatestUser, byte LatestPinHash, List PinHashList, 
+		List verifiedPinHashList) {
+    if(  verifiedPinHashList.contains(LatestPinHash)) {
+        verifiedUserList.add(LatestUser);
     } else {
         System.out.println("error: wrong password");
-
+    	}
     }
-public void chatLogger(ArrayList verifiedUsers, int messageCount) {
+public void chatLogger(List verifiedUserList, int messageCount, String message) {
     ArrayList<String> chatLogs = new ArrayList<>();
-    this.chatLogs.add(Arraylist verifiedUsers);
+    this.chatLogs.add(List verifiedUserList);
     if(messageCount != null) {
         chatLogs.add(this.message);
     }
 public  groupLogger(int groupCount) {
     if(groupCount++)
         System.out.println(latestGroup );
+		}
     }
 
 
@@ -93,7 +102,7 @@ public  groupLogger(int groupCount) {
     public String getNewAccountUUID() {
 
     }
-    public void isUnique(List verifiedUsers) {
+    public void isUnique(List verifiedUserList) {
         if(getVerifiedUser.contains())
     }
     public int messageCount(List messages, List groupChats) {
@@ -123,6 +132,40 @@ public  groupLogger(int groupCount) {
 
                 }
             }
-
     }
-}
+    public void checkVersion(String currentVersion, String latestVersion, boolean isOnLatestVersion) {
+    	if(currentVersion != latestVersion) {
+    		isOnLatestVersion = false;
+    	}
+    		System.out.printf("Please update your client, further directions on github repository %n "
+    				+ "(https://github.com/Martiemche/ChatApp)");
+    	}
+    public String getLatestVerifiedUser() {
+    	if() {
+    		
+    	}
+    }
+    public byte getLatestVerifiedPinHash() {
+    	
+    }
+    public void getLastItem() {
+    	 try {
+    		 int e = Scanner.lastList.size() - 1;
+    	 } catch(Exception IndexOutOfBoundsException)  {
+    		 IndexOutOfBoundsException.printStackTrace();
+    		 System.out.println("Caught IndexOutOfBoundsException");
+    	 	}
+    	 }
+    public void lastLine() {
+    	Scanner inStream = null;
+        String test = "";
+
+        inStream = new Scanner( test );
+
+        while(inStream.hasNextLine() )
+        {
+            System.out.println(inStream.nextLine() );
+    }
+    }
+    	}	
+

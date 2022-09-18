@@ -10,7 +10,10 @@ public class user {
          private String LastName;
          private String Useruuid;
          private String Accountuuid;
-
+         
+         private String currentVersion;
+         private String latestVersion;
+         
         private String UserName;
         private Byte PinHash;
 
@@ -28,8 +31,8 @@ public class user {
         boolean isVerified;
         boolean isUnique;
         boolean isEmpty;
-
-        String LatestUser;
+        boolean isOnLatestVersion;
+        
         byte LatestPinHash;
 
         private String month;
@@ -78,8 +81,11 @@ public class user {
     public ArrayList<String> getVerifiedUsers() {
         return VerifiedUsers;
     }
-    public byte ArrayList<byte> getPinHashes() {
-        return PinHashes;
+    public byte getPinHash() {
+        return PinHash;
+    }
+    public bye getPinHashList() {
+    	for()
     }
     public byte getLatestPinHash() {
     	return LatestPinHash;
